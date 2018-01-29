@@ -1,0 +1,10 @@
+DirectoryIndex index.html
+#  mod_rewrite in use
+
+RewriteEngine On
+
+##enx
+# non-www to www redirect
+rewritecond %{http_host} ^cibercity\.es
+rewriterule ^(.*)$ http://www.cibercity.es/$1 [r=301,L]
+
